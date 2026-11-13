@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<link rel="shortcut icon" type="x-icon" href="sss.ico" >
+    <nav>
+        <ul> 
+        <li><a href="/html/SSS/sss.html"> <img src="/src/images/SSS1.png" alt="SSS logo" width="250" height="45"></a></li>
+        </ul>
+    </nav>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+
+  <title>SSS EALP</title>
+    <link rel="stylesheet" href="/css/SSS/form.css">
+	
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Fill up Form</h1>
+    Fill up the form with correct values.
+    <form action="process.php" method="post">
+        <div class="user-details">
+            <div class="input-box">
+                <span class="details">First Name</span>
+                <input type="text" id="firstname" name="firstname" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Middle Name</span>
+                <input type="text" id="middlename" name="middlename" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Last Name</span>
+                <input type="text" id="lastname" name="lastname" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Email Address</span>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Phone Number</span>
+                <input type="tel" pattern="[0-9]*" id="phonenumber" name="phonenumber" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Birthday (mm/dd/yyyy)</span>
+                <input type="date" id="birthday" name="birthday" required>
+            </div>
+            <div class="input-box">
+                <span class="details">Address</span>
+                <input type="text" id="address" name="address" required>
+            </div>
+            <div class="input-box">
+                <span class="details">SSS Number</span>
+                <input type="tel" pattern="[0-9]*" id="sssnumber" name="sssnumber" required>
+            </div>
+            <div class="input-box">
+                <span class="details">School</span>
+                <input type="text" id="school" name="school" required>
+            </div>
+           
+        </div>
+        <div class="button">
+            <input type="submit" id="register" name="register" value="Submit">
+        </div>
+    </form>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+<script type="text/javascript">
+    $(function() {
+        $('#register').click(function(e) {
+            var valid = this.form.checkValidity();
+            if (valid) {
+                // Gather form data
+                var firstname = $('#firstname').val();
+                var middlename = $('#middlename').val();
+                var lastname = $('#lastname').val();
+                var email = $('#email').val();
+                var phonenumber = $('#phonenumber').val();
+                var birthday = $('#birthday').val();
+                var address = $('#address').val();
+                var sssnumber = $('#sssnumber').val();
+                var school = $('#school').val();
+
+                e.preventDefault(); 
+
+                $.ajax({
+                    type: 'POST',
+                    url: 'process.php',
+                    dataType: 'json',
+                    data: {
+                        firstname,
+                        middlename,
+                        lastname,
+                        email,
+                        phonenumber,
+                        birthday,
+                        address,
+                        sssnumber,
+                        school
+                    },
+                    success: function(response) {
+                        if (response.status === 'exists') {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'User already exists',
+                                text: response.message
+                            });
+                        } else if (response.status === 'success') {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Registration Successful',
+                                text: 'You will be redirected to the dashboard.',
+                                confirmButtonText: 'OK'
+                            }).then(function() {
+                                window.location.href = 'dashboard.php?email=' + response.email;
+                            });
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Registration Error',
+                                text: response.message
+                            });
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'AJAX Error',
+                            text: 'An error occurred: ' + error
+                        });
+                    }
+                });
+            }
+        });
+    });
+</script>

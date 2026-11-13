@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kevin Clark | Portfolio</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" href="/src/images/KC logo black.png" />
+  <script src="https://kit.fontawesome.com/a2e0e6b6b1.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <div class="container">
+    <!-- NAVBAR -->
+    <header class="navbar" role="banner">
+      <div class="logo">
+        <img id="navLogo" src="/src/images/KC logo black.png" alt="Logo" />
+      </div>
+
+      <!-- regular nav (desktop) -->
+      <nav class="nav-desktop" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="/src/Kevin_Clark_Baba_Tech_Resume_.pdf" target="_blank" rel="noopener">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- hamburger button (mobile) -->
+      <button id="hamburger" class="hamburger" aria-label="Open menu" aria-controls="sideMenu" aria-expanded="false">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </button>
+    </header>
+
+    <!-- SIDE SLIDE MENU (mobile) -->
+    <aside id="sideMenu" class="side-menu" role="dialog" aria-hidden="true" aria-label="Mobile menu">
+      <!-- Close Button -->
+      <button id="closeMenu" class="close-menu" aria-label="Close menu">&times;</button>
+
+      <nav role="navigation" aria-label="Mobile primary">
+        <ul class="side-menu-list">
+          <li><a href="#works" class="side-link">Works</a></li>
+          <li><a href="#about" class="side-link">About</a></li>
+          <li><a href="#services" class="side-link">Services</a></li>
+          <li><a href="/src/Kevin_Clark_Baba_Tech_Resume_.pdf" target="_blank" rel="noopener" class="side-link">Resume</a></li>
+          <li><a href="#contact" class="side-link">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- overlay -->
+    <div id="menuOverlay" class="menu-overlay" tabindex="-1" aria-hidden="true"></div>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+     <h1 data-text="Kevin Clark">Kevin Clark</h1>
+      <p>
+        A graphics designer and wannabe frontend developer who spends 80% of my time fixing margins and 20% questioning my life choices.
+      </p>
+    </section>
+  </div>
+
+  <!-- ABOUT SECTION -->
+  <section class="dark-section" id="about">
+    <div class="content">
+      <h2>About</h2>
+      <div class="sec">
+        <p>
+          I’m Kevin Clark — a passionate graphic designer and frontend developer from the Philippines. 
+          I love creating visuals that tell stories and crafting websites that feel alive. 
+          When I’m not designing or coding, you’ll probably find me exploring new design trends, 
+          playing games, or tweaking my layouts for the 100th time.
+        </p>
+        <img class="pogi" src="/src/images/KC Pogi.png" alt="pogi">
+      </div>
+    </div>
+  </section>
+
+<!-- WORKS SECTION -->
+<section class="dark-section" id="works">
+  <h2>Works</h2>
+  <div class="works-container">
+    <div class="works-left">
+      <p>Check out what I’ve been working on.</p>
+    </div>
+
+    <div class="works-right">
+      <div class="project">
+        <span class="num">01</span>
+        <a href="/html/secondlife.html" target="_blank" class="project-title green">SecondLife</a>
+        <p class="desc">
+          A mobile app that lets users buy, sell, or trade old items — promoting sustainability by giving things a second life.
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="project">
+        <span class="num">02</span>
+        <a href="/html/justin/index.html" target="_blank" class="project-title">Justin Nabunturan Gallery</a>
+        <p class="desc">A website dedicated to the Late Justin Nabunturan.</p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="project">
+        <span class="num">03</span>
+        <a href="/html/SSS/sss.html" target="_blank" class="project-title">SSS EALP</a>
+        <p class="desc">
+          A system that allows users to check their student loan status by entering their SSS number.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOGOFOLIO SUBSECTION -->
+  <div class="logofolio-section">
+    <h3 class="logofolio-title">Logofolio</h3>
+    <p class="logofolio-desc">
+      A curated collection of my logo and branding work — blending creativity, balance, and purpose into simple yet powerful visuals.
+    </p>
+
+    <div class="logofolio-grid">
+  <div class="logo-card">
+    <img src="/src/images/sllogo.png" alt="Logo Design 1" />
+    <h4>SecondLife Logo</h4>
+  </div>
+  <div class="logo-card">
+    <img src="/src/images/ORg ni lori copy.png" alt="Logo Design 2" />
+    <h4>SSRI Logo</h4>
+  </div>
+  <div class="logo-card">
+    <img src="/src/images/HABUPA3.png" alt="Logo Design 3" />
+    <h4>SK Harada Butai Logo</h4>
+  </div>
+</div>
+
+</section>
+
+
+  
+
+  <!-- SERVICES SECTION -->
+  <section class="dark-section" id="services">
+    <div class="content">
+      <h2>Services</h2>
+      <div class="services-container">
+        <div class="service">
+          <h3>Graphic Design</h3>
+          <p>I create clean, creative, and aesthetic visuals — from logos to full branding kits that bring ideas to life.</p>
+        </div>
+
+        <div class="service">
+          <h3>Frontend Development</h3>
+          <p>I turn designs into functional, responsive websites using HTML, CSS, and JavaScript with a touch of personality.</p>
+        </div>
+
+        <div class="service">
+          <h3>UI / Visual Design</h3>
+          <p>I design intuitive user interfaces that focus on usability, aesthetics, and a smooth user experience.</p>
+        </div>
+      </div>
+
+      <!-- SKILLS SECTION -->
+      <div class="skills-section">
+        <div class="skills-left">
+          <div class="skill-block">
+            <span class="section-num">01</span>
+            <h3>&lt;Coding /&gt;</h3>
+            <p>These are all of the programming languages I have experience with. Certification pending.</p>
+          </div>
+
+          <div class="skill-block">
+            <span class="section-num">02</span>
+            <h3>Graphic Design</h3>
+            <p>Tools I work with to make visual designs or web layouts.</p>
+          </div>
+
+          <div class="skill-block">
+            <span class="section-num">03</span>
+            <h3 class="cert-heading">Certifications</h3>
+            <p>Certifications I have acquired for the programming languages.</p>
+          </div>
+        </div>
+
+        <div class="skills-right">
+          <ul class="skills-list">
+            <li>HTML <i class="devicon-html5-plain-wordmark"></i></li>
+            <li>CSS <i class="devicon-css3-plain-wordmark"></i></li>
+            <li>JavaScript <i class="devicon-javascript-plain"></i></li>
+            <li>Java <i class="devicon-java-plain-wordmark"></i></li>
+          </ul>
+
+          <ul class="skills-list">
+            <li>Adobe Photoshop <i class="devicon-photoshop-plain"></i></li>
+            <li>Canva <i class="devicon-canva-original"></i></li>
+            <li>Figma <i class="devicon-figma-plain"></i></li>
+          </ul>
+
+          <ul class="skills-list cert-list" id="cert">
+            <li>HTML Essentials 
+              <a href="https://www.credly.com/badges/4fb53c0d-fa60-4c03-815b-c5739a9e162c" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+            <li>CSS Essentials 
+              <a href="https://www.credly.com/badges/2a5ec64d-4354-4c5d-becc-cd8f49bc9cfc" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+            <li>JavaScript 
+              <a href="https://www.credly.com/badges/eca87772-e5f7-4ff9-b66b-81bdcce9793b" target="_blank" rel="noopener">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer dark-section" id="contact">
+    <div class="footer-container">
+      <h3>Thanks for stopping by, let's chat!</h3>
+      <p><i class="fa-solid fa-envelope"></i> kevinclarkbaba10@gmail.com</p>
+
+      <div class="footer-links">
+        <a href="/src/Kevin_Clark_Baba_Tech_Resume_.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file"></i> Resume</a>
+      </div>
+
+      <div class="social-links">
+        <a href="#"><i class="fa-brands fa-linkedin"></i> Linkedin</a>
+        <span>|</span>
+        <a href="https://www.instagram.com/kcskskskskks/" target="_blank" rel="noopener"><i class="fa-brands fa-instagram"></i> Instagram</a>
+        <span>|</span>
+        <a href="https://github.com/Siom4ii" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Github</a>
+      </div>
+
+      <p class="footer-note">© All rights reserved – Kevin Clark 2025</p>
+    </div>
+  </footer>
+
+  <script src="/js/script.js" defer></script>
+</body>
+</html>

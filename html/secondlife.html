@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SecondLife | Kevin Clark</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" href="/src/images/KC logo black.png" />
+</head>
+<body>
+  <!-- Overlay for mobile menu -->
+  <div id="menuOverlay" class="menu-overlay"></div>
+
+  <div class="container">
+    <!-- NAVBAR -->
+    <header class="navbar">
+      <div class="logo">
+        <img id="navLogo" src="/src/images/KC logo black.png" alt="Logo" />
+      </div>
+
+      <!-- HAMBURGER BUTTON -->
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+
+      <!-- DESKTOP NAV -->
+      <nav>
+        <ul>
+          <li><a href="/html/index.html#works">Back</a></li>
+          <li><a href="https://drive.google.com/file/d/1BfbXXZwaRpm1iRgoWG14S0cvLJlC9qj4/view" target="_blank">Download</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- SIDE MENU (for mobile) -->
+    <aside id="sideMenu" class="side-menu" role="dialog" aria-hidden="true" aria-label="Mobile menu">
+      <button id="closeMenu" class="close-menu" aria-label="Close menu">&times;</button>
+      <nav role="navigation" aria-label="Mobile primary">
+        <ul class="side-menu-list">
+          <li><a href="/html/index.html#works" class="side-link">Back</a></li>
+          <li><a href="https://drive.google.com/file/d/1BfbXXZwaRpm1iRgoWG14S0cvLJlC9qj4/view" target="_blank" class="side-link">Download</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+      <h1>Second<span id="clark">Life</span></h1>
+      <p>
+        A mobile app designed to give old items a second chance — buy, sell, or trade pre-loved stuff in a clean, user-friendly interface.
+      </p>
+    </section>
+  </div>
+
+  <!-- ABOUT PROJECT -->
+  <section class="dark-section" id="about">
+    <div class="content">
+      <h2>About the App</h2>
+      <div class="sec">
+        <p>
+          SecondLife is a mobile app I created that promotes sustainability through reusability.
+          Users can list, browse, and trade second-hand items easily.  
+          It’s built with Java for the Android front-end and PHP + MySQL for the backend.  
+          I also integrated Firebase for image hosting and authentication.  
+          <br><br>
+          This project reflects my passion for both design and functionality — blending modern UI design with a seamless experience.
+        </p>
+        <img src="/src/images/SL.jpg" class="SL" alt="SecondLife Preview">
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES SECTION -->
+  <section class="dark-section" id="features">
+    <div class="content">
+      <h2>Features</h2>
+      <div class="works-container">
+        <div class="works-left">
+          <p>What makes SecondLife unique:</p>
+        </div>
+        <div class="works-right">
+          <div class="project">
+            <span class="num">01</span>
+            <p class="desc">User-friendly interface for buying, selling, or trading items.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="project">
+            <span class="num">02</span>
+            <p class="desc">Image upload using ImgBB and Firebase for real-time updates.</p>
+          </div>
+          <div class="divider"></div>
+          <div class="project">
+            <span class="num">03</span>
+            <p class="desc">Secure user login and registration with PHP and MySQL backend.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO VIDEO -->
+  <section id="promo" class="dark-section video-section">
+    <div class="content">
+      <h2>SecondLife Promo Video</h2>
+      <p>Get to know what SecondLife is all about — buy, sell, or trade your old items easily.</p>
+      <div class="video-container">
+        <video autoplay muted loop playsinline>
+          <source src="/src/videos/SecondLife Commercial Final.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="dark-section" id="tech">
+    <div class="content">
+      <h2>Tech Stack</h2>
+      <div class="skills-section">
+        <div class="skills-left">
+          <div class="skill-block">
+            <h3>&lt;Frontend /&gt;</h3>
+            <p>Built with Java (Android), XML layouts, and a clean modern UI approach.</p>
+          </div>
+          <div class="skill-block">
+            <h3>&lt;Backend /&gt;</h3>
+            <p>Powered by PHP and MySQL to manage user data, authentication, and listings.</p>
+          </div>
+        </div>
+
+        <div class="skills-right">
+          <ul class="skills-list">
+            <li>Java <i class="devicon-java-plain-wordmark"></i></li>
+            <li>XML <i class="devicon-android-plain"></i></li>
+            <li>Firebase <i class="devicon-firebase-plain-wordmark"></i></li>
+          </ul>
+          <ul class="skills-list">
+            <li>PHP <i class="devicon-php-plain"></i></li>
+            <li>MySQL <i class="devicon-mysql-plain-wordmark"></i></li>
+            <li>ImgBB API <i class="fa-solid fa-cloud-arrow-up"></i></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Kevin Clark — Made with 💻 and ☕</p>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+</html>

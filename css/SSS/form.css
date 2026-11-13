@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}nav {
+    background-color: #dce2ef; /* changed to a dark gray color */
+    padding: 0.5em;
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-image: linear-gradient(to bottom, #0035aa, #9da8be);
+  z-index: -1;
+  transition: 0.5s;
+}input:checked + label + .background{
+    background: #242424;
+  }
+  
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(255, 242, 242, 0.15);
+  
+}.container table {
+  max-width: 700px;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(255, 242, 242, 0.15);
+  text-align: left;
+  
+}
+
+.container h1 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+}
+
+.input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+
+.input-box input:focus, .input-box input:valid {
+  border-color: #9b59b6;
+}
+
+.button input {
+  
+  height: 100%;
+  width: 47%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #71b7e6, #000000);
+}
+
+.button input:hover {
+  background: linear-gradient(-135deg, #71b7e6, #9b59b6);
+}
+
+/* Responsive design */
+@media (max-width: 584px) {
+  .container {
+    max-width: 100%;
+  }
+  
+  .input-box {
+    width: 100%;
+  }
+}st

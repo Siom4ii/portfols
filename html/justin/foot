@@ -1,0 +1,146 @@
+<div class="footer-col about">
+      <h3>About Us</h3>
+      <p>
+       We are dedicated to providing quality solutions that make everyday life easier and more connected. Our mission is to deliver reliable services with innovation, integrity, and a customer-first approach. With a passionate team and a commitment to excellence, we strive to build long-lasting relationships and create value for our community.
+      </p>
+      <p class="logo">🌐 THEME EXAMPLES</p>
+    </div>
+
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#">My Account</a></li>
+        <li><a href="#">Basket</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Support</h3>
+      <ul>
+        <li><a href="#">Tech Support</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">FAQ</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Follow Us</h3>
+      <div class="socials">
+      <img src=https://th.bing.com/th/id/R.26d9974a1feec9905a4e0d5e5ddf8db6?rik=Og1ujXM2C1AJHQ&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fcommons%2fa%2fa5%2fInstagram_icon.png&ehk=1%2fZWXYn2nN%2fR80TOtcKH5SsdLkkUvMLrB%2fHUXRDHk9I%3d&risl=&pid=ImgRaw&r=0>
+      <img src=https://1.bp.blogspot.com/-S8HTBQqmfcs/XN0ACIRD9PI/AAAAAAAAAlo/FLhccuLdMfIFLhocRjWqsr9cVGdTN_8sgCPcBGAYYCw/s1600/f_logo_RGB-Blue_1024.png>
+
+      <img src=https://imagepng.org/wp-content/uploads/2018/08/twitter-icone-1.png>
+
+                  
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>
+      <a href="#">Privacy Policy</a> | 
+      <a href="#">Terms & Conditions</a> | 
+      <a href="#">Cookies</a>  
+      © 2025 Your Company. All rights reserved.
+    </p>
+  </div>
+
+.footer {
+  background: #2D2D2D;
+  color: #ddd;
+  padding: 40px 60px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer h3 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer p {
+  line-height: 1.6;
+  font-size: 14px;
+}
+
+.footer .logo {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer ul li {
+  margin: 8px 0;
+}
+
+.footer ul li a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer ul li a:hover {
+  color: #fff;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;  /* Center the icons */
+  align-items: center;      /* Align vertically */
+  gap: 20px;                /* Space between icons */
+  margin-top: 10px;
+  margin-right: 180px;
+}
+
+.socials img {
+  width: 40px;              /* Icon size */
+  height: 40px;
+  border-radius: 50%;       /* Optional: circular icons */
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
+
+
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+.footer-bottom a {
+  color: #aaa;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+.footer-bottom a:hover {
+  color: #fff;
+}
+

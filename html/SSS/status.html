@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Status Page</title>
+  <link rel="shortcut icon" type="x-icon" href="sss.ico" >
+  <nav>
+        <ul> 
+        <li><a href="/html/SSS/sss.html"> <img src="/src/images/SSS1.png" alt="SSS logo" width="250" height="45"></a></li>
+        </ul>
+    </nav>
+  <link rel="stylesheet" href="/css/SSS/form.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <style>
+    
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    .status-container {
+      text-align: left;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .reference-input {
+      margin-bottom: 20px;
+    }
+    #status-display {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="status-container">
+    <h1>Student Loan Status Checker</h1>
+    <form>
+      <label for="sss-number">Enter your SSS number:</label>
+      <input type="text" id="sss-number" name="sss-number" required>
+      <button type="submit">View Status</button>
+    </form>
+    <div id="status-display" style="display: none;">
+      <h2>Student Loan Status</h2>
+      <p id="user-firstname"></p>
+      <p id="user-middlename"></p>
+      <p id="user-lastname"></p>
+      <p id="user-email"></p>
+      <p id="user-phonenumber"></p>
+      <p id="user-sssnumber"></p>
+      <p id="user-status"></p>
+    </div>
+  </div>
+
+  <script>
+    // Add an event listener to the form submission
+    document.querySelector('form').addEventListener('submit', function(event) {
+      event.preventDefault();
+      var sssNumber = document.querySelector('#sss-number').value;
+      console.log('Sending request to ' + 'status_process.php?sss_number=' + sssNumber);
+      fetch('status_process.php?sss_number=' + sssNumber)
+        .then(response => {
+          return response.json(); // Convert to JSON
+        })
+        .then(data => {
+          console.log('Received data from server:', data); // Log the response to check structure
+          if (data.length > 0) {
+            // Display the user information
+            document.getElementById('user-firstname').textContent = 'First Name: ' + data[0].firstname;
+            document.getElementById('user-middlename').textContent = 'Middle Name: ' + data[0].middlename;
+            document.getElementById('user-lastname').textContent = 'Last Name: ' + data[0].lastname;
+            document.getElementById('user-email').textContent = 'Email: ' + data[0].email;
+            document.getElementById('user-phonenumber').textContent = 'Phone Number: ' + data[0].phonenumber;
+            document.getElementById('user-sssnumber').textContent = 'SSS Number: ' + data[0].sssnumber;
+            document.getElementById('user-status').textContent = 'Status: ' + data[0].status;
+
+            // Show the status display div
+            document.getElementById('status-display').style.display = 'block';
+          } else {
+            // Show SweetAlert if no data is found
+            Swal.fire({
+              icon: 'error',
+              title: 'Not Found',
+              text: 'No user found with this SSS number.',
+              confirmButtonText: 'OK'
+            });
+          }
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    });
+  </script>
+</body>
+</html>
