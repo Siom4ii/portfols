@@ -141,7 +141,7 @@ window.addEventListener("load", () => {
   const heroName = document.querySelector(".hero h1");
   if (!heroName) return;
 
-  const finalText = "Kevin Clark";
+  const finalText = heroName.dataset.scrambleText || "Kevin Clark";
   const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*(){}[]<>?/\\|";
   let iterations = 0;
   const scrambleDuration = 1500;
