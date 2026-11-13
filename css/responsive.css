@@ -28,6 +28,37 @@ img, video, iframe { max-width: 100%; }
   .portfolio-page .social-links { gap: .65rem; }
 }
 
+/* Keep each skill description aligned with its corresponding tool list. */
+@media (min-width: 901px) {
+  .portfolio-page .skills-section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: clamp(3rem, 8vw, 6.25rem);
+    row-gap: 5rem;
+    align-items: start;
+  }
+
+  .portfolio-page .skills-left,
+  .portfolio-page .skills-right {
+    display: contents;
+  }
+
+  .portfolio-page .skill-block,
+  .portfolio-page .skills-list {
+    margin: 0;
+  }
+
+  .portfolio-page .skill-block:nth-child(1),
+  .portfolio-page .skills-list:nth-child(1) { grid-row: 1; }
+  .portfolio-page .skill-block:nth-child(2),
+  .portfolio-page .skills-list:nth-child(2) { grid-row: 2; }
+  .portfolio-page .skill-block:nth-child(3),
+  .portfolio-page .skills-list:nth-child(3) { grid-row: 3; }
+
+  .portfolio-page .skill-block { grid-column: 1; }
+  .portfolio-page .skills-list { grid-column: 2; }
+}
+
 /* Justin Nabunturan gallery */
 .justin-page, .justin-way, .justin-cards { overflow-x: hidden; }
 .justin-page .cards, .justin-cards .cards { padding: 1.25rem; }
