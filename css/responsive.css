@@ -1,0 +1,76 @@
+/* Responsive overrides for every standalone page in this portfolio. */
+img, video, iframe { max-width: 100%; }
+
+/* Portfolio and SecondLife */
+.portfolio-page .navbar { padding-inline: clamp(1.25rem, 8vw, 20rem); }
+.portfolio-page .container { max-width: 1350px; padding-inline: clamp(1.25rem, 4vw, 2.5rem); }
+.portfolio-page .hero { margin-top: clamp(7rem, 18vw, 18.75rem); margin-bottom: clamp(4.5rem, 16vw, 18rem); margin-left: 0; }
+.portfolio-page .hero h1 { font-size: clamp(3rem, 10vw, 7.5rem); overflow-wrap: anywhere; }
+.portfolio-page .hero #clark { font-size: clamp(3.25rem, 12vw, 9.375rem); }
+.portfolio-page .hero p, .portfolio-page .dark-section p { font-size: clamp(1rem, 2.5vw, 2.1875rem); }
+.portfolio-page .dark-section, .portfolio-page #works, .portfolio-page #services, .portfolio-page #promo, .portfolio-page #contact { padding: clamp(4rem, 10vw, 10rem) clamp(1.25rem, 8vw, 20rem) clamp(3.75rem, 8vw, 7.5rem); }
+.portfolio-page .dark-section h2, .portfolio-page #promo h2, .portfolio-page #contact h2 { font-size: clamp(3rem, 10vw, 7.5rem); margin-bottom: clamp(2.5rem, 7vw, 5.625rem); overflow-wrap: anywhere; }
+.portfolio-page .pogi, .portfolio-page .SL { width: min(100%, 35.625rem); height: auto; object-fit: cover; }
+.portfolio-page .sec, .portfolio-page .works-container { gap: clamp(1.5rem, 5vw, 3.125rem); }
+.portfolio-page .project-title { font-size: clamp(1.8rem, 5vw, 3rem); }
+.portfolio-page .logofolio-title { font-size: clamp(2.5rem, 9vw, 6.25rem); margin-left: 0; }
+.portfolio-page .logofolio-desc { margin-left: 0; font-size: clamp(1rem, 2.5vw, 1.25rem); }
+
+@media (max-width: 900px) {
+  .portfolio-page .sec, .portfolio-page .works-container { flex-direction: column; }
+  .portfolio-page .services-container, .portfolio-page .skills-section { grid-template-columns: 1fr; gap: 2rem; }
+  .portfolio-page .skills-section { margin-top: 4rem; }
+  .portfolio-page .skill-block, .portfolio-page .skills-list { margin-bottom: 2.5rem; }
+}
+@media (max-width: 600px) {
+  .portfolio-page .side-menu { width: min(20rem, 90vw); }
+  .portfolio-page .service, .portfolio-page .logo-card { padding: 1.25rem; }
+  .portfolio-page .social-links { gap: .65rem; }
+}
+
+/* Justin Nabunturan gallery */
+.justin-page, .justin-way, .justin-cards { overflow-x: hidden; }
+.justin-page .cards, .justin-cards .cards { padding: 1.25rem; }
+.justin-page .card, .justin-cards .card { width: min(100%, 18.75rem); }
+.justin-page .aboutCont { max-width: 90%; }
+.justin-page .about img { width: min(100%, 31.25rem); height: auto; }
+.justin-page .about_content, .justin-page .about p, .justin-page .details h5, .justin-page .mesej { width: min(100%, 31.25rem); height: auto; }
+.justin-page iframe { width: min(100%, 37.5rem); margin: 1.5rem 0; }
+.justin-cards .tiktok-embed { width: calc(100% - 2rem) !important; min-width: 0 !important; margin-inline: auto !important; }
+@media (max-width: 768px) {
+  .justin-page nav { flex-wrap: wrap; }
+  .justin-page header, .justin-way header { height: auto; min-height: 0; flex-direction: column; align-items: center; padding: 3rem 1.25rem; text-align: center; }
+  .justin-page .logo1, .justin-way .logo { width: 100%; align-items: center; }
+  .justin-page .logo1 img { margin-left: 0; max-width: 9rem; }
+  .justin-page .banner-content, .justin-page .banner-content h2, .justin-page .banner-content p { text-align: center; }
+  .justin-page .banner-content button { margin: 0; }
+  .justin-page .aboutCont { flex-direction: column; align-items: center; }
+  .justin-page .about img { padding: 1.25rem; border-radius: 2rem; }
+  .justin-page .about_content { margin-top: 0; padding: 1.25rem; }
+  .justin-page .contacts { padding: 1.5rem; }
+}
+
+/* SSS information, application, and status pages */
+.sss-info, .sss-form, .sss-status { min-height: 100vh; overflow-x: hidden; }
+.sss-info { display: block; padding: 0; background: linear-gradient(to bottom, #0035aa, #9da8be); }
+.sss-info header { height: auto; padding: 7rem clamp(1.25rem, 6vw, 6rem) 3rem; text-align: center; }
+.sss-info header h1 { font-size: clamp(1.5rem, 4vw, 2.5rem); line-height: 1.35; }
+.sss-info nav { padding: .75rem clamp(1rem, 4vw, 3rem); }
+.sss-info nav ul { gap: .75rem; justify-content: space-between; flex-wrap: wrap; }
+.sss-info nav li { margin: 0; }
+.sss-info nav li:first-child { margin-right: auto; }
+.sss-info nav img { width: min(10rem, 36vw); height: auto; }
+.sss-info nav button { padding: .7rem 1rem; font-size: .95rem; }
+.sss-info main { width: min(100% - 2.5rem, 60rem); margin: 2rem auto 3rem; gap: 1.5rem; }
+.sss-info main ul, .sss-info main > p, .sss-info main > h1, .sss-info main > h3 { width: 100%; margin: 0; padding: 1.5rem; border-radius: 1rem; background: #fff; text-align: left; }
+.sss-info main h1 { font-size: clamp(1.35rem, 4vw, 2rem); margin-bottom: 1rem; }
+.sss-info main h3 { font-size: clamp(1rem, 2.5vw, 1.15rem); line-height: 1.6; }
+.sss-form, .sss-status { height: auto; min-height: 100vh; padding: 5.5rem 1rem 2rem; }
+.sss-form .container, .sss-status .status-container { width: min(100%, 43.75rem); margin: 0 auto; }
+.sss-status .status-container { padding: clamp(1rem, 4vw, 2rem); }
+.sss-form .button input { min-height: 2.8rem; width: 100%; }
+@media (max-width: 584px) {
+  .sss-info nav ul { justify-content: center; }
+  .sss-info nav li:first-child { width: 100%; margin-right: 0; }
+  .sss-form .container { padding: 1.25rem; }
+}
